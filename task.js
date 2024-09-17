@@ -3,23 +3,29 @@
 
 "use strict";
 
+"use strict";
+
 function solveEquation(a, b, c) {
   let arr = [];
-  let discriminant = b ** 2 - 4 * a * c;
+  let discriminant = b ** 2 - 4 * a * c; // Вычисляем дискриминант
 
   if (discriminant < 0) {
+    // Корней нет, возвращаем пустой массив
     return arr;
   } else if (discriminant === 0) {
+    // Один корень
     let singleRoot = -b / (2 * a);
     arr.push(singleRoot);
   } else {
+    // Два корня
     let root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
     let root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
     arr.push(root1, root2);
   }
 
-  return arr;
+  return arr; // Возвращаем массив с корнями
 }
+
 
 // Задание 2
 
